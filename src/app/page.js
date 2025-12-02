@@ -3,19 +3,23 @@ import ProductList from "../components/ProductList";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-peony overflow-hidden">
+    // FIX: Ganti 'overflow-hidden' jadi 'overflow-x-hidden'
+    // Biar tetep bisa scroll ke bawah, tapi logo yang miring gak bikin scroll samping.
+    <main className="min-h-screen bg-peony overflow-x-hidden">
+      
       {/* Hero Section */}
       <header className="py-16 md:py-24 text-center px-4 relative z-10">
-        <div className="relative w-64 h-64 mx-auto mb-8 md:w-80 md:h-80 -rotate-15 transform-gpu transition-transform hover:-rotate-12">
+        
+        {/* LOGO AREA */}
+        <div className="relative w-48 h-48 mx-auto mb-8 md:w-64 md:h-64 -rotate-15 transform-gpu transition-transform hover:-rotate-12">
           <Image 
-            src="/images/logo2.png" // Pastikan file ada di public/images/logo.png
+            src="/images/logo2.png"
             alt="Logo Kuukiss"
             fill
             className="object-contain drop-shadow-md"
             priority
           />
         </div>
-        {/* --------------------------- */}
 
         {/* Tagline */}
         <p className="text-espresso/80 text-xl md:text-2xl max-w-lg mx-auto font-medium leading-relaxed font-body relative z-20">
