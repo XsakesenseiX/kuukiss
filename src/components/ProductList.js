@@ -9,7 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const phoneNumber = "6285121307719"; 
 const instagramHandle = "@kuukiss.ss";
 const createWaLink = (productName) => {
-  const message = `Halo Kuukiss, saya tertarik mau pesan ${productName}.`;
+  const message = `Halo Min kiss! saya mau pesan ${productName}.`;
   return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 };
 
