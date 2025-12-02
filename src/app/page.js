@@ -10,7 +10,7 @@ export default function Home() {
         {/* LOGO AREA */}
         <div className="relative w-48 h-48 mx-auto mb-6 md:w-64 md:h-64">
           <Image 
-            src="/images/logo.png" // Pastikan file ini ada di public/images/
+            src="/images/logo1.png" // Pastikan file ini ada di public/images/
             alt="Logo Kuukiss"
             fill
             className="object-contain drop-shadow-sm"
