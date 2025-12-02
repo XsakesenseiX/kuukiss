@@ -22,8 +22,8 @@ const products = [
     price: "Rp 85.000",
     shortDesc: "Coklat lumer di dalam, crunchy di luar.",
     fullDesc: "Menggunakan dark chocolate premium 70% yang meleleh sempurna saat digigit. Best seller kami yang bikin nagih!",
-    image: "/images/cookies1.webp",
-    moreImages: ["/images/cookies1-detail.webp"], 
+    image: "/images/ft1.webp",
+    moreImages: ["/images/ft3.webp", "/images/ft4.webp", "/images/ft5.webp"],
     tag: "Favorite",
   },
   {
