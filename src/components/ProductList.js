@@ -23,7 +23,7 @@ const products = [
     shortDesc: "Coklat lumer di dalam, crunchy di luar.",
     fullDesc: "Menggunakan dark chocolate premium 70% yang meleleh sempurna saat digigit. Best seller kami yang bikin nagih!",
     image: "/images/ft1.webp",
-    moreImages: ["/images/ft3.webp", "/images/ft4.webp", "/images/ft5.webp"],
+    moreImages: ["/images/ft3.webp", "/images/ft4.webp"],
     tag: "Favorite",
   },
   {
