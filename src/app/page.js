@@ -13,7 +13,7 @@ export default function Home() {
       {/* HEADER HERO */}
       <header className="relative py-20 md:py-32 text-center px-4 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src="/images/hero-bg.webp" alt="Background" fill className="object-cover opacity-20" priority />
+          <Image src="/images/ft2.webp" alt="Background" fill className="object-cover opacity-20" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-peony/30 via-peony/60 to-peony"></div>
         </div>
         
@@ -25,7 +25,7 @@ export default function Home() {
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               className="relative w-48 h-48 mx-auto mb-6 md:w-64 md:h-64"
             >
-              <Image src="/images/logo.png" alt="Logo" fill className="object-contain drop-shadow-2xl" priority />
+              <Image src="/images/logo2.png" alt="Logo" fill className="object-contain drop-shadow-2xl" priority />
             </motion.div>
 
             <motion.p 
