@@ -3,14 +3,14 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-// --- DATA PRODUK (Sama kayak kemarin) ---
+// --- DATA PRODUK ---
 const products = [
   {
     id: 1,
     name: "Choco Melter",
     price: "Rp 85.000",
     desc: "Coklat lumer di dalam, crunchy di luar. Best seller!",
-    image: "/images/cookies1.webp", // Pastikan ada filenya
+    image: "/images/cookies1.webp",
     tag: "Favorite",
   },
   {
@@ -31,7 +31,7 @@ const products = [
   },
 ];
 
-// --- CONFIG ANIMASI (Tetap sama) ---
+// --- VARIAN ANIMASI ---
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { staggerChildren: 0.15 } },
@@ -44,9 +44,9 @@ const cardVariants = {
 
 export default function ProductList() {
   return (
-    <section className="py-16 px-4">
+    <section className="pb-20 px-4">
       <div className="max-w-5xl mx-auto">
-        <h2 className="font-handwriting text-4xl text-espresso text-center mb-12">
+        <h2 className="font-handwriting text-5xl text-espresso text-center mb-12 drop-shadow-sm">
           Menu Pilihan
         </h2>
 
@@ -61,17 +61,13 @@ export default function ProductList() {
             <motion.div
               key={item.id}
               variants={cardVariants}
-              whileHover={{ y: -8, rotate: 1 }} // Micro-interaction: goyang dikit biar cute
-              // UBAH STYLE CARD DISINI:
-              // bg-white/50 = semi-transparan biar warnanya nyatu sama background peony
-              // border-espresso/10 = garis tipis warna espresso
-              className="bg-white/60 backdrop-blur-sm rounded-2xl p-4 shadow-sm hover:shadow-md transition-all duration-300 border border-espresso/10 group"
+              whileHover={{ y: -8, rotate: 1 }}
+              className="bg-white/60 backdrop-blur-sm rounded-3xl p-4 shadow-sm hover:shadow-lg transition-all duration-300 border border-espresso/5 group"
             >
               {/* Image Container */}
-              <div className="relative h-64 w-full rounded-xl overflow-hidden shadow-inner">
+              <div className="relative h-72 w-full rounded-2xl overflow-hidden shadow-inner bg-white">
                 {item.tag && (
-                  // Tag warna Espresso
-                  <span className="absolute top-3 left-3 z-10 bg-espresso text-peony text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                  <span className="absolute top-4 left-4 z-10 bg-espresso text-peony text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md">
                     {item.tag}
                   </span>
                 )}
@@ -81,21 +77,19 @@ export default function ProductList() {
               </div>
 
               {/* Content */}
-              <div className="pt-5 pb-2 text-center">
-                {/* Judul Produk pake font handwriting */}
-                <h3 className="font-handwriting text-2xl text-espresso mb-1">{item.name}</h3>
-                <p className="text-espresso/70 text-sm mb-4 min-h-[40px] leading-snug">
+              <div className="pt-6 pb-2 px-2 text-center">
+                <h3 className="font-handwriting text-3xl text-espresso mb-2">{item.name}</h3>
+                <p className="text-espresso/70 text-sm mb-5 min-h-[40px] leading-relaxed font-body">
                   {item.desc}
                 </p>
                 
-                <div className="flex items-center justify-between px-2">
-                    <span className="text-espresso font-extrabold text-lg">
+                <div className="flex items-center justify-between mt-auto">
+                    <span className="text-espresso font-extrabold text-lg font-body">
                         {item.price}
                     </span>
-                    {/* Button warna Espresso, teks Peony */}
                     <motion.button
                     whileTap={{ scale: 0.9 }}
-                    className="bg-espresso text-peony px-5 py-2 rounded-full font-bold text-sm hover:bg-opacity-90 transition-colors"
+                    className="bg-espresso text-peony px-6 py-2.5 rounded-full font-bold text-sm hover:bg-espresso/90 transition-colors shadow-md"
                     >
                     Beli
                     </motion.button>

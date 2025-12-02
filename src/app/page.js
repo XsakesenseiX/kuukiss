@@ -1,27 +1,36 @@
+import Image from "next/image";
 import ProductList from "../components/ProductList";
 
 export default function Home() {
   return (
-    // Ganti background jadi warna Peony
     <main className="min-h-screen bg-peony">
       {/* Hero Section */}
-      <header className="py-24 text-center px-4">
-        {/* Judul pake font handwriting & warna espresso */}
-        <h1 className="font-handwriting text-6xl md:text-7xl text-espresso mb-6 drop-shadow-sm">
-          Kuu<span className="text-white/80">kiss</span>.
-        </h1>
-        <p className="text-espresso/80 text-xl max-w-lg mx-auto font-medium leading-relaxed">
-          Teman manis untuk harimu yang estetik. Dibuat dengan cinta dan bahan premium.
+      <header className="py-16 md:py-24 text-center px-4">
+        
+        {/* LOGO AREA */}
+        <div className="relative w-48 h-48 mx-auto mb-6 md:w-64 md:h-64">
+          <Image 
+            src="/images/logo.png" // Pastikan file ini ada di public/images/
+            alt="Logo Kuukiss"
+            fill
+            className="object-contain drop-shadow-sm"
+            priority
+          />
+        </div>
+
+        {/* Tagline */}
+        <p className="text-espresso/80 text-xl md:text-2xl max-w-lg mx-auto font-medium leading-relaxed font-body">
+          Teman manis untuk harimu yang estetik.
         </p>
       </header>
 
-      {/* Komponen List Produk */}
+      {/* Product Section */}
       <ProductList />
       
       {/* Footer */}
       <footer className="py-12 text-center text-espresso/60 font-medium">
-        <p className="font-handwriting text-2xl mb-2">Thank you!</p>
-        © 2025 Kuukiss. Stay sweet.
+        <p className="font-handwriting text-3xl mb-2">Thank you!</p>
+        <p className="text-sm">© 2025 Kuukiss. Stay sweet.</p>
       </footer>
     </main>
   );
