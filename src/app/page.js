@@ -2,23 +2,26 @@ import ProductList from "../components/ProductList";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
-      {/* Hero Section Sederhana */}
-      <header className="py-20 text-center px-4">
-        <h1 className="text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">
-          Kuu<span className="text-yellow-500">kiss</span>.
+    // Ganti background jadi warna Peony
+    <main className="min-h-screen bg-peony">
+      {/* Hero Section */}
+      <header className="py-24 text-center px-4">
+        {/* Judul pake font handwriting & warna espresso */}
+        <h1 className="font-handwriting text-6xl md:text-7xl text-espresso mb-6 drop-shadow-sm">
+          Kuu<span className="text-white/80">kiss</span>.
         </h1>
-        <p className="text-gray-600 text-lg">
-          Cookies paling enak se-antero server.
+        <p className="text-espresso/80 text-xl max-w-lg mx-auto font-medium leading-relaxed">
+          Teman manis untuk harimu yang estetik. Dibuat dengan cinta dan bahan premium.
         </p>
       </header>
 
       {/* Komponen List Produk */}
       <ProductList />
       
-      {/* Footer Sederhana */}
-      <footer className="py-8 text-center text-gray-400 text-sm">
-        © 2025 Kuukiss. All rights reserved.
+      {/* Footer */}
+      <footer className="py-12 text-center text-espresso/60 font-medium">
+        <p className="font-handwriting text-2xl mb-2">Thank you!</p>
+        © 2025 Kuukiss. Stay sweet.
       </footer>
     </main>
   );

@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+@theme {
+  /* Definisi Warna dari Gambar Lo */
+  --color-espresso: #3E2723;
+  --color-peony: #F4C9D6;
+  --color-peony-dark: #ebb0c0; /* Versi agak gelap buat hover button */
+
+  /* Definisi Font dari layout.js */
+  --font-handwriting: var(--font-handwriting);
+  --font-body: var(--font-body);
+}
